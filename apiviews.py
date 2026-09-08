@@ -78,7 +78,7 @@ class createSchedule(APIView):
 			c[className[item]] = courses[className[item]]
 			for co in className[item].corequisite:
 				c[co] = courses[co]
-		c = dict(sorted(c.items(), key=lambda item: item[1]))
+		c = dict(sorted(c.items(), key=lambda item: item[1], reverse=True))
 		while c:
 			course = next(iter(c))
 			classSchedule(c, schedule, course, points)

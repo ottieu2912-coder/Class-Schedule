@@ -191,7 +191,7 @@ className = {"Classical Physics I": Physics7C, "Classical Physics II": Physics7D
 courses = {Physics7C: 2, Physics7D: 3, Math2E: 3, Math2D: 2}
 schedule = [[], [], []]
 points = [0 ,0 ,0]
-courses = dict(sorted(courses.items(), key=lambda item: item[1]))
+courses = dict(sorted(courses.items(), key=lambda item: item[1], reverse=True))
 """
 while courses:
     course = next(iter(courses))
